@@ -31,3 +31,10 @@ https://github.com/settings/applications/492997
 Add Like Model
 
 15:25 Pause
+16:25
+
+16:45 http://stackoverflow.com/questions/24221367/like-button-ajax-in-ruby-on-rails -> not really used this
+
+17:30 https://alexpeattie.com/blog/grouping-activerecord-by-day-or-week-with-datetrunc
+
+18:00 mandatory stuff almost done
