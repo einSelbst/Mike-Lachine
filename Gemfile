@@ -49,6 +49,18 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+
+  gem 'spring-commands-rspec'
+  # gem 'spring-commands-rubocop'
+
+  gem 'guard-rails', require: false
+  gem 'guard-rspec', require: false
+  gem 'guard-puma'
+
+  # gem 'terminal-notifier'
+  # gem 'terminal-notifier-guard'
+
+  # gem 'rb-fsevent'
 end
 
 group :development do
@@ -58,7 +70,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
