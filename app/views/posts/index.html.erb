@@ -18,10 +18,13 @@
         <td><%= post.title %></td>
         <td><%= link_to h(post_url(post.id)), post_url(post.id) %></td>
         <td><%= post.likes.count %></td>
-        <% if post.user == current_user %>
-          <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user %>
+          <td><%= button_to "Like", post_likes_path(post.id), remote: true %></td>
+          <% if post.user == current_user %>
+            <td><%= link_to 'Show', post %></td>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>

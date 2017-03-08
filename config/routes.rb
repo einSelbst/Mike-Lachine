@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do
+    resources :likes, only: :create
+  end
 
   # github login/logout
   get "/auth/:provider/callback", to: "sessions#create"
