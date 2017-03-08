@@ -9,4 +9,9 @@ FactoryGirl.define do
     content  "A miracle happened!"
     user
   end
+
+  factory :like, class: Like do
+    user
+    post
+  end
 end
