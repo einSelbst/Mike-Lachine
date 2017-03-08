@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
+    <% @posts.order_by_day_and_likes.each do |post| %>
       <tr>
         <td><%= post.title %></td>
         <td><%= link_to h(post_url(post.id)), post_url(post.id) %></td>
