@@ -15,9 +15,9 @@
   <tbody>
     <% @posts.order_by_day_and_likes.each do |post| %>
       <tr>
-        <td><%= post.likes.count %></td>
         <td><%= link_to post.title, post_url(post.id) %></td>
         <td><%= post_url(post.id) %></td>
+        <td><%= post.likes_count %></td>
         <% if current_user %>
           <td><%= button_to "Like", post_likes_path(post.id), remote: true %></td>
           <% if post.user == current_user %>
