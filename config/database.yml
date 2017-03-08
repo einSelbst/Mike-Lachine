@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: Like-Machine_production
-  username: Like-Machine
-  password: <%= ENV['LIKE-MACHINE_DATABASE_PASSWORD'] %>
+  database: ebdb
+  username: tom
+  password: likemachine
+  host: aah1k2f8cpbxhp.ctkuylhuv3jv.eu-central-1.rds.amazonaws.com
