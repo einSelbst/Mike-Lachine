@@ -4,13 +4,13 @@ class SessionsController < ApplicationController
 
     if user.valid?
       session[:user_id] = user.id
-      redirect_to request.env['omniauth.origin']
+      redirect_to new_post_path, notice: "Any adventure lately?"
     end
   end
 
   def destroy
     reset_session
-    redirect_to request.referer
+    redirect_to "/"
   end
 
   protected
